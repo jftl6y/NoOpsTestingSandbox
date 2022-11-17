@@ -251,7 +251,7 @@ module containerApp_roleAssignments './rbac/roleAssignments.bicep' = [for (roleA
   }
 }]
 
-module containerApp_privateEndpoints '../../Microsoft.Network/privateEndPoint/az.net.private.endpoint.bicep' = [for (privateEndpoint, index) in privateEndpoints: {
+module containerApp_privateEndpoints '../../Microsoft.Network/privateEndPoints/az.net.private.endpoint.bicep' = [for (privateEndpoint, index) in privateEndpoints: {
   name: '${uniqueString(deployment().name, location)}-Site-PrivateEndpoint-${index}'
   params: {
     groupIds: [
