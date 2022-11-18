@@ -9,7 +9,7 @@ param location string = resourceGroup().location
 @description('Required. Length of the Public IP Prefix.')
 @minValue(28)
 @maxValue(31)
-param prefixLength int
+param prefixLength int =28
 
 @allowed([
   ''
