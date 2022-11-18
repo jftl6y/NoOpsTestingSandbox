@@ -108,9 +108,10 @@ var existingPip = {
     id: azureBastionSubnetPublicIpId
   }
 }
+var pipTemp = publicIPAddress.outputs.resourceId
 var newPip = {
   publicIPAddress: (empty(azureBastionSubnetPublicIpId) && isCreateDefaultPublicIP) ? {
-    id: publicIPAddress.outputs.resourceId
+    id: pipTemp
   } : null
 }
 
